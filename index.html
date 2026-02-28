@@ -1,110 +1,367 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whittemore Painting | Professional Painting Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center gap-2">
-                <div class="flex-shrink-0">
-                    <h1 class="font-bold text-lg sm:text-2xl text-blue-900 tracking-tight">Whittemore Painting</h1>
-                </div>
-                <div>
-                    <a href="tel:5555555555" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 sm:py-3 sm:px-6 rounded-md transition duration-300 shadow-sm text-sm sm:text-base whitespace-nowrap">
-                        <span class="hidden sm:inline">Call Now: </span>(555) 555-5555
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="relative bg-blue-900 pt-28 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center text-center">
-        <div class="absolute inset-0 overflow-hidden">
-            <img src="https://placehold.co/1920x1080/1e3a8a/1e3a8a" alt="Background" class="w-full h-full object-cover opacity-50">
-        </div>
+    <title>Perfection Painting LLC | Des Moines, IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-dark: #1A2530; /* Deep Navy */
+            --accent-gold: #C5A880; /* Elegant Gold */
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+        }
         
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Professional Painting, <br/> Done Right.
-            </h2>
-            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-                High-quality interior and exterior painting services. Clean lines, beautiful finishes, and a job completed on time.
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: var(--primary-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-btn {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(26, 37, 48, 0.7), rgba(26, 37, 48, 0.7)), url('http://googleusercontent.com/image_collection/image_retrieval/10083310951832422735_0') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            color: #FFFFFF;
+            font-size: 56px;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        .hero .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            color: #FFFFFF;
+        }
+
+        /* Stats/Trust Bar */
+        .trust-bar {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            color: var(--accent-gold);
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .trust-item p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 18px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Info Section (Address/Contact) */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 80px 5%;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('http://googleusercontent.com/image_collection/image_retrieval/10083310951832422735_1') center/cover;
+            border-radius: 8px;
+            box-shadow: -20px 20px 0px var(--accent-gold);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .contact-detail strong {
+            margin-right: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #999;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 40px; }
+            .trust-bar { flex-direction: column; gap: 30px; }
+            .info-section { flex-direction: column-reverse; }
+            .info-image { width: 100%; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Perfection<span>Painting</span></div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="tel:5157718718" class="contact-btn">(515) 771-8718</a>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Transforming Des Moines, One Brushstroke at a Time.</h1>
+        <p>Premium interior and exterior painting services tailored for a flawless, lasting finish.</p>
+        <div class="cta-buttons">
+            <a href="tel:5157718718" class="btn-primary">Get a Free Estimate</a>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="trust-item">
+            <h3>4.7 / 5</h3>
+            <p>Google Rating</p>
+        </div>
+        <div class="trust-item">
+            <h3>Local</h3>
+            <p>Des Moines, IA</p>
+        </div>
+        <div class="trust-item">
+            <h3>100%</h3>
+            <p>Satisfaction Focused</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our Expertise</h2>
+        <p class="section-subtitle">We deliver perfection across all aspects of residential and commercial painting.</p>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10083310951832422735_2" alt="Interior Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Interior Painting</h3>
+                    <p>Elevate your living spaces with meticulous prep work, clean lines, and premium paints that breathe new life into your home's interior.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10083310951832422735_3" alt="Exterior Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Exterior Painting</h3>
+                    <p>Protect your investment and boost curb appeal with weather-resistant finishes designed to withstand the harsh Iowa seasons.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10083310951832422735_1" alt="Commercial Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Commercial Services</h3>
+                    <p>Professional, efficient painting solutions for local businesses, minimizing downtime while delivering an immaculate corporate look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="about">
+        <div class="info-text">
+            <h2 class="section-title">Ready for a fresh look?</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+                Whether you are touching up a single room or repainting your entire exterior, Perfection Painting LLC brings years of local expertise to every job in the Des Moines area.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:5555555555" class="bg-white text-blue-900 font-bold text-lg py-4 px-8 rounded-md hover:bg-gray-100 transition duration-300 shadow-lg">
-                    Call for a Free Quote
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white py-12 border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Interior Painting</h3>
-                    <p class="text-gray-600">Transform your living spaces with flawless color and sharp lines.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Exterior Painting</h3>
-                    <p class="text-gray-600">Boost curb appeal and protect your property from the elements.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Clean & Reliable</h3>
-                    <p class="text-gray-600">We respect your space, leaving nothing behind but a perfect finish.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Recent Work</h2>
-                <p class="mt-4 text-lg text-gray-600">Browse some of our latest painting projects.</p>
-            </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+1" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+2" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+3" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+4" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+5" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="group relative overflow-hidden rounded-lg shadow-md aspect-w-4 aspect-h-3 bg-gray-200 hover:shadow-xl transition duration-300">
-                    <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Project+Photo+6" alt="Painting Project" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-500">
-                </div>
+            <div class="contact-detail">
+                <strong>📍 Location:</strong> 500 N Valley Dr UNIT 702, Des Moines, IA 50312
             </div>
-            
-            <div class="mt-16 text-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Ready to transform your space?</h3>
-                <a href="tel:5555555555" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-md transition duration-300 shadow-lg text-lg">
-                    Call (555) 555-5555 for a Quote
-                </a>
+            <div class="contact-detail">
+                <strong>📞 Phone:</strong> (515) 771-8718
             </div>
+            <div class="contact-detail">
+                <strong>⭐ Reviews:</strong> 4.7 Stars from our local clients
+            </div>
+
+            <br>
+            <a href="tel:5157718718" class="contact-btn" style="display: inline-block; font-size: 18px; padding: 15px 30px;">Call to Schedule</a>
         </div>
+        <div class="info-image"></div>
     </section>
 
-    <footer class="bg-gray-900 py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400 font-semibold mb-2">Whittemore Painting</p>
-            <p class="text-gray-500 text-sm">Call us at (555) 555-5555</p>
-            <p class="mt-6 text-gray-600 text-xs">&copy; 2026 Whittemore Painting. All rights reserved.</p>
-        </div>
+    <footer>
+        <div class="logo" style="margin-bottom: 15px;">Perfection<span>Painting</span> LLC</div>
+        <p>500 N Valley Dr UNIT 702, Des Moines, IA 50312 | (515) 771-8718</p>
+        <p>&copy; 2026 Perfection Painting LLC. All rights reserved.</p>
+        <p style="font-size: 12px; margin-top: 20px;"><em>Design Concept by Skyline Woodworks LLC / ABC Web Designs</em></p>
     </footer>
 
 </body>
