@@ -80,6 +80,505 @@
             border-radius: 4px;
             font-weight: 600;
             transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(26, 37, 48, 0.7), rgba(26, 37, 48, 0.7)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            color: #FFFFFF;
+            font-size: 56px;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        .hero .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            color: #FFFFFF;
+        }
+
+        /* Stats/Trust Bar */
+        .trust-bar {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            color: var(--accent-gold);
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .trust-item p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 18px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 5%;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px; /* Uniform height for all images */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 5%;
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .reviews-section .section-title {
+            color: #FFFFFF;
+        }
+
+        .reviews-section .section-subtitle {
+            color: #CCCCCC;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-gold);
+            text-align: left;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: var(--accent-gold);
+        }
+
+        /* Info Section (Address/Contact) */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 80px 5%;
+            align-items: center;
+            gap: 50px;
+            background-color: var(--bg-light);
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            /* Updated to a clean interior painted room */
+            background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80') center/cover;
+            border-radius: 8px;
+            box-shadow: -20px 20px 0px var(--accent-gold);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .contact-detail strong {
+            margin-right: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #999;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header { 
+                flex-direction: column; /* Stacks the logo and button */
+                gap: 15px; 
+                padding: 15px;
+            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 40px; }
+            .trust-bar { flex-direction: column; gap: 30px; }
+            .info-section { flex-direction: column-reverse; }
+            .info-image { width: 100%; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Perfection<span>Painting</span></div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="tel:5157718718" class="contact-btn">(515) 771-8718</a>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Transforming Des Moines, One Brushstroke at a Time.</h1>
+        <p>Premium interior and exterior painting services tailored for a flawless, lasting finish.</p>
+        <div class="cta-buttons">
+            <a href="tel:5157718718" class="btn-primary">Get a Free Estimate</a>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="trust-item">
+            <h3>4.7 / 5</h3>
+            <p>Google Rating</p>
+        </div>
+        <div class="trust-item">
+            <h3>Local</h3>
+            <p>Des Moines, IA</p>
+        </div>
+        <div class="trust-item">
+            <h3>100%</h3>
+            <p>Satisfaction Focused</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our Expertise</h2>
+        <p class="section-subtitle">We deliver perfection across all aspects of residential and commercial painting.</p>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80" alt="Interior Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Interior Painting</h3>
+                    <p>Elevate your living spaces with meticulous prep work, clean lines, and premium paints that breathe new life into your home's interior.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Exterior Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Exterior Painting</h3>
+                    <p>Protect your investment and boost curb appeal with weather-resistant finishes designed to withstand the harsh Iowa seasons.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1541889814460-705886915152?auto=format&fit=crop&w=600&q=80" alt="Commercial Painting" class="service-img">
+                <div class="service-content">
+                    <h3>Commercial Services</h3>
+                    <p>Professional, efficient painting solutions for local businesses, minimizing downtime while delivering an immaculate corporate look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="portfolio">
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-subtitle">A look at our recent residential and commercial painting transformations across Des Moines.</p>
+        
+        <div class="gallery-grid">
+            <img src="pp1.jpg" alt="Painting Project 1">
+            <img src="pp2.jpg" alt="Painting Project 2">
+            <img src="pp3.jpg" alt="Painting Project 3">
+            <img src="pp4.jpg" alt="Painting Project 4">
+            <img src="pp5.jpg" alt="Painting Project 5">
+        </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">We maintain a 4.7-star rating by putting our customers first.</p>
+        
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"They were super friendly and I would rate their painting/customer service 100%."</p>
+                <div class="reviewer-name">- Des Moines Resident</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"They got the job done in a timely manner and their work is excellent."</p>
+                <div class="reviewer-name">- Local Client</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Their expertise, communication, and timing of everything was spot on."</p>
+                <div class="reviewer-name">- Happy Homeowner</div>
+            </div>
+        </div>
+        
+        <a href="https://maps.google.com/?cid=123456789" target="_blank" class="btn-primary" style="background-color: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold);">
+            Read All 13 Reviews on Google
+        </a>
+    </section>
+
+    <section class="info-section" id="about">
+        <div class="info-text">
+            <h2 class="section-title">Ready for a fresh look?</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+                Whether you are touching up a single room or repainting your entire exterior, Perfection Painting LLC brings years of local expertise to every job in the Des Moines area.
+            </p>
+            
+            <div class="contact-detail">
+                <strong>📍 Location:</strong> 500 N Valley Dr UNIT 702, Des Moines, IA 50312
+            </div>
+            <div class="contact-detail">
+                <strong>📞 Phone:</strong> (515) 771-8718
+            </div>
+            <div class="contact-detail">
+                <strong>⭐ Reviews:</strong> 4.7 Stars from our local clients
+            </div>
+
+            <br>
+            <a href="tel:5157718718" class="contact-btn" style="display: inline-block; font-size: 18px; padding: 15px 30px;">Call to Schedule</a>
+        </div>
+        <div class="info-image"></div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 15px;">Perfection<span>Painting</span> LLC</div>
+        <p>500 N Valley Dr UNIT 702, Des Moines, IA 50312 | (515) 771-8718</p>
+        <p>© 2026 Perfection Painting LLC. All rights reserved.</p>
+        <p style="font-size: 12px; margin-top: 20px;"><em>Design Concept by ABC Web Designs</em></p>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfection Painting LLC | Des Moines, IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-dark: #1A2530; /* Deep Navy */
+            --accent-gold: #C5A880; /* Elegant Gold */
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: var(--primary-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-btn {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
         }
 
         .contact-btn:hover {
@@ -498,4 +997,5 @@
 
 </body>
 </html>
+
 
